@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Profile</title>
+  </head>
+  <body>
+    <form class="" action="/users/update" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden"><br>
+      Email : <input type="text" name="Email" value= "<%= @user.email %>">
+      Name : <input type="text" name="Name" value="<%= @user.name %>">
+      <input type="submit" name="update" value="Update">
+    </form>
+    <form class="" action="/users/destroy" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input type="submit" name="Delete" value="Delete Account">
+    </form>
+  </body>
+</html>

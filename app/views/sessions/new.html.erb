@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+  </head>
+  <body>
+    <%= flash[:errors]%>
+    <form class="" action="/sessions/new" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      Email: <input type="text" name="Email" value=""><br>
+      Password: <input type="text" name="Password" value=""><br>
+      <input type="submit" name="submit" value="Log In">
+    </form>
+  </body>
+</html>
